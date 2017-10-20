@@ -600,7 +600,7 @@ var MetricFilesystemUsage = Metric{
 			result = append(result, LabeledMetric{
 				Name: "filesystem/usage",
 				Labels: map[string]string{
-					LabelResourceID.Key: "/",
+					LabelResourceID.Key: fs.Device,
 				},
 				MetricValue: MetricValue{
 					ValueType:  ValueInt64,
@@ -631,7 +631,7 @@ var MetricFilesystemLimit = Metric{
 			result = append(result, LabeledMetric{
 				Name: "filesystem/limit",
 				Labels: map[string]string{
-					LabelResourceID.Key: "/",
+					LabelResourceID.Key: fs.Device,
 				},
 				MetricValue: MetricValue{
 					ValueType:  ValueInt64,
@@ -674,7 +674,7 @@ var MetricFilesystemInodes = Metric{
 				result = append(result, LabeledMetric{
 					Name: "filesystem/inodes",
 					Labels: map[string]string{
-						LabelResourceID.Key: "/",
+						LabelResourceID.Key: fs.Device,
 					},
 					MetricValue: MetricValue{
 						ValueType:  ValueInt64,
@@ -707,7 +707,7 @@ var MetricFilesystemInodesFree = Metric{
 				result = append(result, LabeledMetric{
 					Name: "filesystem/inodes_free",
 					Labels: map[string]string{
-						LabelResourceID.Key: "/",
+						LabelResourceID.Key: fs.Device,
 					},
 					MetricValue: MetricValue{
 						ValueType:  ValueInt64,
